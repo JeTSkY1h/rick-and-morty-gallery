@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(216, 225, 233);
+    height: 4rem;
+}
+
+#search {
+    padding-right: 60px;
+}
+
+.searchbar {
+    margin: 1rem;
+}
