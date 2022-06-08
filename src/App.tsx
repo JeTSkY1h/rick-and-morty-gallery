@@ -12,6 +12,7 @@ function App() {
   useEffect(()=>{
     getAllChars().then(data => {
       setChars(data.results);
+      console.log(chars);
     })
   },[])
 

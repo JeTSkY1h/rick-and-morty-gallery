@@ -6,3 +6,15 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color: #444;
 }
+
+.char.card {
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all 0.2s;
+    max-width: 300px;
+}
+
+.char.card:hover {
+    
+    transform: scale(1.2);
+}

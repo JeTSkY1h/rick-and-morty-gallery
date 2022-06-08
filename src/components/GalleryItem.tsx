@@ -10,7 +10,8 @@ export default function GalleryItem(props: GalleryItemProps){
         return (
             <div className="char card">
                 <img src={char.image} alt={`${char.name}`}/>
-               <p>{props.char.name}</p> 
+                
+                <p>{props.char.name}</p> 
             </div>
         )
 }
