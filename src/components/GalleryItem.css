@@ -11,7 +11,7 @@
 }
 
 .char.card {
-    overflow: hidden;
+    position: relative;
     border-radius: 4px;
     transition: all 0.2s;
     max-width: 300px;
@@ -34,5 +34,22 @@
 
 .char-info > p {
     margin: 0;
+}
+
+.log-btn:hover {
+    background-color: aliceblue;
+}
+
+.log-btn {
+    transition: all 0.2s;
+    background-color: white;
+    color: rgb(9, 109, 134);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    bottom: 55px;
 }
 
