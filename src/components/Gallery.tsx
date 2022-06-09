@@ -32,7 +32,7 @@ export default function Gallery(props: GalleryProps){
                 })}
             </div>
             <div className="pagination">
-            {props.res.info.prev ? <button onClick={prevPage}><FaChevronLeft/></button> : ""} {props.res.info.pages} <button onClick={nextPage}><FaChevronRight/></button>
+            {props.res.info.prev && <button onClick={prevPage}><FaChevronLeft/></button>} {props.res.info.pages} <button onClick={nextPage}><FaChevronRight/></button>
             </div>
         </>
     )

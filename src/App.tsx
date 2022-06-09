@@ -8,28 +8,14 @@ import { getAllChars } from "./service/apiService";
 
 function App() {
 
-  const [response, setResponse] = useState<Response>({
-    info: {
-      count:826,
-      next: "https://rickandmortyapi.com/api/character/?page=2",
-      prev: "",
-      pages: 42,
-    },
-    results: [
-      {
-        name: "Rick Sanchez",
-        status: "Alive",
-        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-        location: {
-          name: "asdasd",
-        },
-      }
-    ]});
+  const [response, setResponse] = useState<Response>();
   const [searchVal, setSearchval] = useState<string>(" ");
 
   useEffect(()=>{
     getAllChars(" ").then(data => {
       setResponse(data);
+      console.log(data);
+      
     })
   },[])
 
@@ -37,6 +23,8 @@ function App() {
     setSearchval(newVal)
     getAllChars(newVal).then(res => {
       setResponse(res);
+      console.log(res);
+      
     })
   }
 
@@ -46,7 +34,7 @@ function App() {
         <Nav  search={{onChange: handleSearchChange, setChars: setResponse, value: searchVal}}/>
       </header>
       <main>
-        <Gallery res={response} setResponse={setResponse}/>
+        { response && <Gallery res={response} setResponse={setResponse}/>}
       </main>
       <footer>
 
