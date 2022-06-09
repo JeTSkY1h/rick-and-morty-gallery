@@ -1,13 +1,21 @@
 import "./Nav.css";
 import {FaSearch} from "react-icons/fa"
+import Searchbar from "./Searchbar";
+import { ChangeEvent, SetStateAction } from "react";
 
-export default function Nav() {
+interface NavProps {
+    search: {
+        onChange: Function,
+        value: string,
+        setChars: Function
+    }
+}
+
+
+export default function Nav(props: NavProps) {
     return (
         <nav>
-            <div className="searchbar">
-                <input id="search"></input>
-                <button id=""><FaSearch /></button>
-            </div>
+            <Searchbar  setChars={props.search.setChars} value={props.search.value} onChange={props.search.onChange}/>
         </nav>
     )
 }

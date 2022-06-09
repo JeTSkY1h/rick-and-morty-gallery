@@ -21,10 +21,11 @@
     transform: scale(1.2);
 }
 .char-name {
-    margin: 0;
+    margin: 0 0 0 0.5rem;
 }
 
 .char-info {
+    margin-left: 0.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
     display: flex;
