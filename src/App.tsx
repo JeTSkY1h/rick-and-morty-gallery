@@ -19,18 +19,16 @@ function App() {
       {
         name: "Rick Sanchez",
         status: "Alive",
+        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
         location: {
           name: "asdasd",
         },
-        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
       }
     ]});
   const [searchVal, setSearchval] = useState<string>(" ");
 
   useEffect(()=>{
     getAllChars(" ").then(data => {
-      console.log(data);
-      
       setResponse(data);
     })
   },[])
@@ -48,7 +46,7 @@ function App() {
         <Nav  search={{onChange: handleSearchChange, setChars: setResponse, value: searchVal}}/>
       </header>
       <main>
-        <Gallery res={response} />
+        <Gallery res={response} setResponse={setResponse}/>
       </main>
       <footer>
 
