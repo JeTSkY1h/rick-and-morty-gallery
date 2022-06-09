@@ -2,6 +2,9 @@
     margin: 2rem;
 }
 
+.bold {
+    font-weight: 600;
+}
 .card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color: #444;
@@ -15,6 +18,21 @@
 }
 
 .char.card:hover {
-    
     transform: scale(1.2);
 }
+.char-name {
+    margin: 0 0 0 0.5rem;
+}
+
+.char-info {
+    margin-left: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.char-info > p {
+    margin: 0;
+}
+
