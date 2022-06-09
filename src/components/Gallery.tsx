@@ -7,6 +7,7 @@ interface GalleryProps {
 }
 
 export default function Gallery(props: GalleryProps){
+        
 
     return (
         <>
@@ -16,7 +17,7 @@ export default function Gallery(props: GalleryProps){
                 })}
             </div>
             <div className="pagination">
-                {props.res.info.count}
+                {props.res.info.pages}
             </div>
         </>
     )

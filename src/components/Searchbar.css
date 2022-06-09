@@ -1,7 +1,21 @@
 #search {
-    padding-right: 60px;
+    border-radius: 5px;
+    height: 24px;
+    padding-right: 25px;
 }
+
+
 
 .searchbar {
     margin: 1rem;
+}
+
+.search-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid #333;
+    height: 27px;
+    width: 25px;
+    border: none;
+    margin-left: -26px;
 }

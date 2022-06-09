@@ -1,7 +1,5 @@
 import "./Nav.css";
-import {FaSearch} from "react-icons/fa"
 import Searchbar from "./Searchbar";
-import { ChangeEvent, SetStateAction } from "react";
 
 interface NavProps {
     search: {
@@ -10,7 +8,6 @@ interface NavProps {
         setChars: Function
     }
 }
-
 
 export default function Nav(props: NavProps) {
     return (

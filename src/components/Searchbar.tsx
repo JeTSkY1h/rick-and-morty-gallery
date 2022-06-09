@@ -8,7 +8,7 @@ interface SearchbarProps {
     setChars: Function
 }
 
-export default function Searchbar(props: SearchbarProps){
+const Searchbar = (props: SearchbarProps) =>{
 
     function handleChange(event: React.FormEvent<HTMLInputElement>) {
         console.log(event.currentTarget.value);
@@ -30,3 +30,4 @@ export default function Searchbar(props: SearchbarProps){
         </div>
     );
 }
+export default Searchbar;

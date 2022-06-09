@@ -37,6 +37,9 @@ function App() {
 
   function handleSearchChange(newVal: string){
     setSearchval(newVal)
+    getAllChars(newVal).then(res => {
+      setResponse(res);
+    })
   }
 
   return (
