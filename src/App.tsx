@@ -35,6 +35,10 @@ function App() {
     })
   },[])
 
+  function handleSearchChange(newVal: string){
+    setSearchval(newVal)
+  }
+
   return (
     <div className="App">
       <header className="App-header">

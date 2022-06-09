@@ -1,0 +1,6 @@
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(216, 225, 233);
+    height: 4rem;
+}
