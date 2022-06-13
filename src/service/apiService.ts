@@ -1,16 +1,20 @@
 import axios from "axios";
 import {Response} from "./models"
 
+
+export const getThings = (url: string) =>{
+    return axios.get(url).then(res => res.data)
+        .catch(error =>console.log(error));
+}
+
 export const getAllChars = (query: string) =>{
-    return axios.get(`https://rickandmortyapi.com/api/character/?name=${query}`)
-        .then(response => response.data)
+    return getThings(`https://rickandmortyapi.com/api/charater/?name=${query}`)
   }
 
 export const getNextPage = (response: Response) => {
-    return axios.get(response.info.next)
-        .then(res => res.data);
+    return getThings(response.info.next)
 }
 
 export const getPrevPage = (response: Response) => {
-    return axios.get(response.info.prev).then(res=> res.data)
+    return getThings(response.info.prev)
 }
