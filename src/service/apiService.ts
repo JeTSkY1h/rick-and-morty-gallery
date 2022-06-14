@@ -8,7 +8,7 @@ export const getThings = (url: string) =>{
 }
 
 export const getAllChars = (query: string) =>{
-    return getThings(`https://rickandmortyapi.com/api/charater/?name=${query}`)
+    return getThings(`https://rickandmortyapi.com/api/character/?name=${query}`)
   }
 
 export const getNextPage = (response: Response) => {

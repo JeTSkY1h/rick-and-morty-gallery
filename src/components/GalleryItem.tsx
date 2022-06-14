@@ -17,7 +17,7 @@ export default function GalleryItem(props: GalleryItemProps){
             <div className="char card">
                 <img src={char.image} alt={`${char.name}`}/>
                 <button onClick={handleClick} className="log-btn"><VscDebugConsole size={32}/></button>
-                <h3 className="char-name">{char.name}</h3>
+                <h3 className="char-name" data-testid="name">{char.name}</h3>
                 <div className="char-info">
                     <p className="char-status"><span className="bold">{props.char.status}</span></p>
                     <p className="char-location">{char.location.name}</p>
