@@ -17,7 +17,7 @@ export default function Gallery(){
     
     useEffect(()=>{
         getAllChars(search).then(data => setRes(data))
-    })
+    },[])
 
 
     const nextPage = () => {
@@ -32,17 +32,17 @@ export default function Gallery(){
         })
     }
 
-    const handleSearchChange = (newBal: string) => {
-        console.log(newBal)
-        setSearch(newBal)
+    const handleSearchChange = (newVal: string) => {
+        setSearch(newVal)
     }
 
     return (
         <>  
+
             <Searchbar data-testid="search-field" onChange={handleSearchChange} setChars={setRes} value={search}/>
             <div className="flex">
                 { res?.results.map((char, i)=>{
-                   return <GalleryItem data-testid={"character" + i} key={Math.random()*Date.now()} char={char}></GalleryItem>
+                   return <GalleryItem index={i} key={Math.random()*Date.now()} char={char}></GalleryItem>
                 })}
             </div>
             <div className="pagination">

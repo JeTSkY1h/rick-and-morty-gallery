@@ -1,6 +1,7 @@
 import "./Searchbar.css";
 import {FaSearch} from "react-icons/fa"
 import {getAllChars} from "../service/apiService"
+import { useState } from "react";
 
 interface SearchbarProps {
     onChange: Function,
@@ -10,23 +11,21 @@ interface SearchbarProps {
 
 const Searchbar = (props: SearchbarProps) =>{
 
-    function handleChange(event: React.FormEvent<HTMLInputElement>) {
-        console.log(event.currentTarget.value);
-        
-        props.onChange(event.currentTarget.value)
-    }
+    const [search, setSearch] = useState("");
 
     function startsearch(){
-        getAllChars(props.value).then(data => {
+        getAllChars(search).then(data => {
             props.setChars(data)
-            console.log(data);
         })
     }
 
     return (
         <div className="searchbar">
-            <input data-testid="searchbar" value={props.value} onChange={handleChange} id="search"></input>
-            <button onClick={startsearch} className="search-btn"><FaSearch /></button>
+            <input data-testid="searchbar" value={search} onChange={(e)=>{
+                setSearch(e.target.value)
+                startsearch();
+                }} id="search"></input>
+            <button data-testid="searchbtn" onClick={startsearch} className="search-btn"><FaSearch /></button>
         </div>
     );
 }

@@ -7,6 +7,10 @@ export const getThings = (url: string) =>{
         .catch(error =>console.log(error));
 }
 
+export const getSingleCharacter = (id:string) => {
+    return getThings(`https://rickandmortyapi.com/api/character/${id}`)
+}
+
 export const getAllChars = (query: string) =>{
     return getThings(`https://rickandmortyapi.com/api/character/?name=${query}`)
   }

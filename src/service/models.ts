@@ -9,6 +9,7 @@ export interface Response {
 }
 
 export interface Char {
+    id: number,
     name: string,
     image: string,
     status: string,
