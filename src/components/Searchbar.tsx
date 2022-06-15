@@ -25,7 +25,7 @@ const Searchbar = (props: SearchbarProps) =>{
 
     return (
         <div className="searchbar">
-            <input value={props.value} onChange={handleChange} id="search"></input>
+            <input data-testid="searchbar" value={props.value} onChange={handleChange} id="search"></input>
             <button onClick={startsearch} className="search-btn"><FaSearch /></button>
         </div>
     );

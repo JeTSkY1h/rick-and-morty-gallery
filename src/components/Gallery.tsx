@@ -39,10 +39,10 @@ export default function Gallery(){
 
     return (
         <>  
-            <Searchbar onChange={handleSearchChange} setChars={setRes} value={search}/>
+            <Searchbar data-testid="search-field" onChange={handleSearchChange} setChars={setRes} value={search}/>
             <div className="flex">
-                { res && res.results.map(char=>{
-                   return <GalleryItem key={Math.random()*Date.now()} char={char}></GalleryItem>
+                { res?.results.map((char, i)=>{
+                   return <GalleryItem data-testid={"character" + i} key={Math.random()*Date.now()} char={char}></GalleryItem>
                 })}
             </div>
             <div className="pagination">
