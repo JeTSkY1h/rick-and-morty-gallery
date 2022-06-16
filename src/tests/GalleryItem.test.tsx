@@ -7,7 +7,7 @@ import { MemoryRouter, } from "react-router-dom";
 
 export {}
 
-const char: Char = {id: 1, name: "test", status:"Alive", image: "http://image.jpg", location: {name: "Hier"} } 
+const char: Char = {id: 1, name: "test", status:"Alive", image: "http://image.jpg", location: {name: "Hier"}} 
 const char1: Char ={id: 2,name: "Rick", status:"Alive", image: "http://image.jpg", location: {name: "erde"}}
 const char2: Char ={id: 3,name: "Morty", status:"Alive", image: "http://image.jpg", location: {name: "erde"}}
 const char3: Char ={id: 4,name: "Fisch-Morty", status:"Alive", image: "http://image.jpg", location: {name: "erde"}}

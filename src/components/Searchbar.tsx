@@ -1,7 +1,7 @@
 import "./Searchbar.css";
 import {FaSearch} from "react-icons/fa"
-import {getAllChars} from "../service/apiService"
-import { useState } from "react";
+import {getFilteredChars} from "../service/apiService"
+import { useEffect, useState } from "react";
 
 interface SearchbarProps {
     onChange: Function,
@@ -11,10 +11,11 @@ interface SearchbarProps {
 
 const Searchbar = (props: SearchbarProps) =>{
 
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState('');
 
     function startsearch(){
-        getAllChars(search).then(data => {
+        console.log(search)
+        getFilteredChars(search).then(data => {
             props.setChars(data)
         })
     }
@@ -23,7 +24,6 @@ const Searchbar = (props: SearchbarProps) =>{
         <div className="searchbar">
             <input data-testid="searchbar" value={search} onChange={(e)=>{
                 setSearch(e.target.value)
-                startsearch();
                 }} id="search"></input>
             <button data-testid="searchbtn" onClick={startsearch} className="search-btn"><FaSearch /></button>
         </div>
